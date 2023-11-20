@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Resultados</h2>
+
+        {% for key, value in results.items() %}
+            {% if key == 'Gráfico de dispersão' %}
+                {% if value %}
+                    <li><strong>{{ key }}:</strong></li>
+                    <img src="data:image/png;base64,{{ value }}" alt="Gráfico de dispersão">
+                {% endif %}
+            {% else %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endif %}
+        {% endfor %}
+
+    <img src="data:image/png;base64,{{ scatter_plot }}" alt="Gráfico de Dispersão">
+    <br>
+    <a class="voltar" href="/">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body{
+    background-color: lightblue;
+    padding: 10px 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    background-color: blue;
+    color: white;
+}
+
+p{
+    background-color: white;
+    padding: 10px;
+    font-size: large;
+    border: 5px solid gold;
+    border-radius: 5px;
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+img{
+    margin-top: 100px;
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gold;
+    margin-bottom: 10px;
+}
+
+.voltar{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+}

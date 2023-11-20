@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha o Regressor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Escolha o Regressor</h2>
+
+    <p>Seja bem vindo ao machine learning com python, o dataset selecionado é o "auto-mpg", que contém dados de carros, o machine learning
+    está relacionando o peso do carro ao consumo de combustivel, que é medido em milhas por galão (medida americana), abaixo há 4 opções
+    de regressores para fazer o aprendizado(KNN, SVR, MLP, Random Forest), os parametros de cada regressor são definidos estaticamente no código, para ter mais eficiencia
+    (e pq seria muito mais dificil definir pelo usuario)</p>
+
+    <form action="/result" method="post">
+        <select name="regressor">
+            {% for regressor in regressors %}
+                <option value="{{ regressor }}">{{ regressor }}</option>
+            {% endfor %}
+
+        </select>
+        <input class="btn" type="submit" value="Executar">
+    </form>
+    <img src="https://ichef.bbci.co.uk/news/640/cpsprodpb/13F45/production/_128033718_7f69a3f4-04cc-47b9-8b65-33bfce77dc85.jpg" alt="messi">
+</body>
+</html>
