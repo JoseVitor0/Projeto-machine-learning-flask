@@ -132,6 +132,3 @@ Integrar modelos ML com aplicações web
 
 Visualizar métricas e resultados de forma simples
 
-Se quiser, no próximo passo eu posso:
-
-Adaptar
